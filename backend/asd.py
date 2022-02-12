@@ -1,1 +1,1 @@
-print('gd')
+print('ㅎㅇ')
