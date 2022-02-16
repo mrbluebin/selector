@@ -24,6 +24,9 @@ class get_time(APIView):
             return Response(serial.data,status=status.HTTP_201_CREATED)
         return Response(serial.errors,status=status.HTTP_400_BAD_REQUEST)
 
+def index(request):
+    print(request)
+    return HttpResponse('HI')
 class testD(APIView):
     def get(self,request,pk,format=None):
         nt = get_object_or_404(testnowtime,pk=pk)
