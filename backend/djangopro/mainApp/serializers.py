@@ -1,7 +1,17 @@
 from rest_framework import serializers
-from .models import testnowtime
+from .models import Product,Typelist,QuestionList
 
-class testnowtimeSerializer(serializers.ModelSerializer):
+
+class ProductSerializers(serializers.ModelSerializer):
     class Meta:
-        model  = testnowtime
-        fields = ('idx','con')
+        model  = Product
+        fields = ('name','taglist')
+
+class TypelistSerializers(serializers.ModelSerializer):
+    class Meta:
+        model  = Typelist
+        fields = ('name',)
+class QuestionListSerializers(serializers.ModelSerializer):
+    class Meta:
+        model  = QuestionList
+        fields = ('que','ans1','ans2')
